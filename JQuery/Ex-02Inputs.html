@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
+    <script>
+        $().ready(function(){
+            $("div:first").slideUp(5000);
+            $("a").click(function(){
+                $("div:first").slideDown(5000);
+            });
+            
+            $("#divDis").fadeToggle(5000);
+            $("button").click(function(event){
+                event.preventDefault();
+                const obj = {}
+                obj.name = $("#textName").val();
+                obj.email = $("#textEmail").val();
+                obj.salary = $("#textSalary").val();
+                $("#divDis").text(JSON.stringify(obj));
+                $("#divDis").fadeToggle(5000);
+            })
+            // alert("hey hey");
+        })
+    </script>
+    <style>
+        h1{
+    text-align: center;
+    border: 25px;
+    margin: 5px;
+    padding: 10px;
+}
+    </style>
+</head>
+<body>
+    <a href="#">Display data</a>
+    <div>
+        <h1>Employee data</h1>
+        
+            <hr>
+            <form>
+                <p>
+                    Enter the name:<input type="text" id="textName">
+                </p>
+                <p>
+                    Enter the Email:<input type="mail" id="textEmail">
+                </p>
+                <p>
+                    Enter the Salary:<input type="number" id="textSalary" max="50000" min="20000">
+                </p>
+                <p>
+                    <button type="submit">Display data</button>
+                </p>
+            </hr>
+        </form>
+    </div>
+    <div id="divDis">
+
+    </div>
+</body>
+</html>

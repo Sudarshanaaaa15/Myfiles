@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .static {
+            position: static;
+            border: 2px solid darkmagenta;
+            padding: 10px;
+        }
+
+        .fixed {
+            bottom: 20px;
+            position: fixed;
+            border: 3px solid darkgreen;
+            margin-right: 20px;
+            text-align: center;
+            width: 95%;
+        }
+
+        .relative {
+            left: 120px;
+            position: relative;
+            border: 2px solid darkslateblue;
+        }
+
+        .absolute {
+            position: absolute;
+            border: 3px solid black;
+            top: 80%;
+            width: 90px;
+            height: 75px;
+        }
+
+        .sticky {
+            position: sticky;
+            padding: 25px;
+            border: 3px solid red;
+
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">
+        <p>static position
+        </p>
+    </div>
+    <div class="fixed">
+        <p>
+            fixed position
+        </p>
+    </div>
+    <div class="relative">
+        <p>relative position</p>
+    </div>
+    <div class="absolute">
+        <p>absolute position</p>
+    </div>
+    <div class="sticky">
+        <p>sticky position</p>
+    </div>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFaLlyi9xtd37E8LtP68WlNwB-fJcFWnH9zwi4JwFTOHMarkHHNxypI9KNGkXQ0gHJWOY&usqp=CAU" alt="Snow" style="width:20%">
+        <div class="top-left">Top Left</div>
+    </div>
+</body>
+
+</html>

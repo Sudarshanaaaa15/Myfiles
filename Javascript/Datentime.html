@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createDate() {
+            year = parseInt(prompt("Enter the year"));
+            month = parseInt(prompt("Enter the month from 0 to 12"));
+            date = parseInt(prompt("Enter the date from 0 to 30"));
+            return new Date(year, month, date);
+        }
+        function displayDate(date) {
+            const div = document.createElement("div");
+
+            const year = date.getYear();
+            // console.log(year);
+            const month = date.getMonth();
+            console.log(month)
+            const dat = date.getDate();
+            const time = date.getTime();
+            const hour = date.getHours();
+            const min = date.getMinutes();
+            const sec = date.getSeconds();
+            div.innerHTML = `The year: ${year}<br>
+            The month: ${month}<br>
+            The date: ${dat}<br>
+            The time: ${time}<br>
+            The hour: ${hour}<br>
+            The min: ${min}<br>
+            The sec: ${sec}<br>`;
+            document.body.appendChild(div);
+            
+            
+            
+        }
+
+        function popupDate() {
+            // alert(new Date());
+            // alert(new Date(16, 12, 2022));
+            // alert(new Date("16/12/2022"));
+            // const chooseDate = createDate();
+            // document.getElementById("pDisplay").innerText = chooseDate;
+            const chooseDate = new Date(document.getElementById("textDate").value);
+            displayDate(chooseDate);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>DATE AND TIME BASED FUNCTIONS</h1>
+    <hr>
+    <div>
+        Enter the date: <input type="date" id="textDate"/>
+        <button onclick="popupDate()">Show Date and Time</button>
+        <p id="pDisplay"></p>
+
+    </div>
+    <div>
+
+    </div>
+
+</body>
+
+</html>

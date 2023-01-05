@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
+    <script src="./Toll.js"></script>
+</head>
+<script>
+    function populateDropBox(){
+        const sel = document.getElementById("selType");
+        for(let i =0; i < localStorage.length; i++){
+            let option = document.createElement("option");
+            option.textContent = localStorage.key(i);
+            sel.appendChild(option);
+        }
+    }
+
+    const repo = new VehicleRepo();
+    $().ready(function () {
+        $("div").hide();
+        localStorage.setItem("Car", 150);
+        localStorage.setItem("Bike", 50);
+        localStorage.setItem("Bus", 250);
+        localStorage.setItem("Truck", 500);
+        repo.addNewVehicle(new Vehicle('KA14 MA 2333', 'Car', 150))
+        repo.addNewVehicle(new Vehicle('KA15 MG 2459', 'Car', 150))
+        repo.addNewVehicle(new Vehicle('KA11 GG 7412', 'Car', 150))
+        repo.addNewVehicle(new Vehicle('KA24 FA 4582', 'Car', 150))
+        populateDropBox();
+        
+        $("#selType").change(function () {
+            const type = $("#selType").val();
+            const amount = localStorage.getItem(type);
+            $("#textAmount").val(amount)
+        })
+        
+        $("div").find("button:eq(0)").click(function () {
+            const vNo = $("#textNo").val();
+            const type = $("#selType").val();
+            const amount = parseInt($("#textAmount").val());
+
+            const obj = new Vehicle(vNo.toUpperCase(), type, amount);
+            repo.addNewVehicle(obj);
+            alert("Vehicle details added successfully!!");
+            console.log(JSON.stringify(repo.data));
+
+        })
+
+
+        $("nav > button:first").click(function () {
+            $("div").hide();
+            $("div:first").show(2000);
+        })
+        $("nav > button:last").click(function () {
+            $("div").hide();
+            $("div:last").show(2000);
+            displayStatistics();
+        })
+
+
+    })
+    function displayStatistics() {
+        
+        const data = repo.getAllDetails();
+        $("table").find("tr:gt(0)").remove();
+        for (const obj of data.keys()) {
+            let values = data.get(obj);
+            let row = `<tr>
+                <td rowspan="${values.length + 1}">${obj}</td>
+                <td rowspan="${values.length + 1}">Rs. ${values[0].amount * values.length}</td>`;
+            $.each(values, (index, value) => {
+                let columnData = `<tr><td>${value.vehicleNo}</td><td>Rs. ${value.amount}</td></tr>`
+                row += columnData;
+            })
+            row += `</td>`
+            $("table").append(row)
+        }
+    
+    }
+</script>
+<!-- <style>
+    nav{
+        text-align: right;
+
+    }
+
+</style> -->
+
+
+<body>
+    <nav>
+        <button>Add vehicle</button>
+        <br>
+        <button>Display data</button>
+    </nav>
+
+    <div>
+        <h1>Add New Vehicle</h1>
+        <hr>
+        <p>
+            Enter a vehicle Number:<input type="text" id="textNo"><br>
+            Choose the type of vehicle: <select id="selType">
+            <option>type</option>
+            </select><br>
+            Amount Recived: <input type="text" id="textAmount" disabled><br>
+            Date :<input type="date"><br>
+            <button>Add new Vehicle</button>
+        </p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquerylib.min.js"></script>
+    <script src="RepoCom.js"></script>
+    <style>
+        body{
+            background-color: lightblue;
+            
+        }
+        h1{
+            text-align: center;
+            font-size: xx-large;
+            border: 2px solid black;
+            background-color: rgb(83, 120, 133);
+            /* background: transparent; */
+            margin: 10px;
+            /* margin-left: 500px;
+            margin-right: 500px; */
+            padding: 30px;
+            
+        }
+        li{
+            display: inline-block;
+            border: 25px;
+            background-color: rgb(196, 136, 136);
+            padding: 8px;
+            border-radius: 3px;
+            margin: 5px;
+        }
+        a:hover{
+            background-color: rgb(162, 125, 197);
+            color: azure;
+        }
+
+
+    </style>
+    <script>
+         const expRepo = new ExpenseManager();
+        function createData(){
+            expRepo.addNewExpense(new Expense("Food at cafe", 100, new Date(2022, 11, 13)))
+            expRepo.addNewExpense(new Expense("Brunch at cafe", 120, new Date(2022, 10, 23)))
+            expRepo.addNewExpense(new Expense("Coffee at cafe", 10, new Date(2022, 11, 11)))
+            expRepo.addNewExpense(new Expense("Tea at hotel", 10, new Date(2022, 11, 12)))
+        }
+        // function dateString(date){
+        //     return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
+        // }
+        function populateData(data){
+            $.each(data, (index, item)=>{
+              const row = `<tr>
+                    <td>${item.id}</td>
+                    <td>${item.detail}</td>
+                    <td>${item.amount}</td>
+                    <td>${dateString(item.date)}</td>
+                     `;
+               $("table").append(row);        
+            })
+        }
+        function onDispTable(){
+            $("div.container").children("div").hide();
+            $(".container").show(2500);
+            // alert("Displaying the table");
+        }
+        function onDispNewExpense(){
+            $("div.container").children("div").hide();
+            $(".container > div:last").show(2500);
+            // alert("Displaying the new expense");
+        }
+        function onFindExpenseByDate(){
+            $("div.container").children("div").hide();
+            $(".container > div:first").next().show(2500);
+            // alert("Found by Date");
+        }
+        function onFindExpenseByDetail(){
+            alert("Found by Detail");
+        }
+        function init(){
+            $("div.container").children("div").hide();
+            $("a:first").click(onDispTable)
+            $("a:eq(1)").click(onDispTable)
+            $("ul>li:eq(2)>a").click(onDispTable)
+            $("ul>li:eq(3)>a").click(onFindExpenseByDetail);
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Expense Manager Software</h1>
+    <nav style="text-align: center;">
+        
+            <li><a href="#">View All Expenses</a></li>
+            <li><a href="#">Add New Expense</a></li>
+            <li><a href="#">Find Expenses By Date</a></li>
+            <li><a href="#">Find Expenses By Detail</a></li>
+        
+    </nav>
+    <hr>
+    <div class="container">
+        <h2>Table of records</h2>
+        <hr>
+        <table border="1">
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+    </div>
+    <div>
+        <h2>Details of Expenses</h2>
+    </div>
+    <hr>
+    <div>
+        <h2>
+            Add new Expense
+        </h2>
+        <hr>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./objectbasics.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("id").value = obje.id;
+            document.getElementById("name").value = obje.name;
+            document.getElementById("address").value = obje.address;
+            document.getElementById("salary").value = obje.salary;
+
+            document.getElementById("Empid").value = Empobj.Empid;
+            document.getElementById("Empname").value = Empobj.Empname;
+            document.getElementById("Empaddress").value = Empobj.Empaddress;
+            document.getElementById("Empsalary").value = Empobj.Empsalary;
+        })
+    </script>
+    
+  </head>
+  <body>
+    <h1>USING SINGLETONE OBJECTS</h1>
+    <div>
+        <p><input type="text" id="id" placeholder="id"></p>
+        <p><input type="text" id="name" placeholder="name"></p>
+        <p><input type="text" id="address" placeholder="address"></p>
+        <p><input type="text" id="salary" placeholder="salary"></p><br>
+
+        <button>Save changes</button>
+        <button>Clear changes</button>
+    </div>
+    <div>
+        <h1>USING CLASS</h1>
+        <p><input type="text" id="Empid" placeholder="id" ></p>
+        <p><input type="text" id="Empname" placeholder="name"></p>
+        <p><input type="text" id="Empaddress" placeholder="address"></p>
+        <p><input type="text" id="Empsalary" placeholder="salary"></p><br>
+
+        <button>Save changes</button>
+        <button>Clear changes</button>
+    </div>
+    
+  </body>
+  </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 50px;
+            background-color: red;
+            width: 200px;
+            height: 250px;
+            display: inline-block;
+            margin: 7px;
+
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
+</head>
+<body>
+    <script>
+        // jQuery(document).ready(function(){
+        //     alert("Iam ready");
+        // });
+        // const func = function(){
+        //     // $("div").click(function(){
+        //     //     $(this).css("background-color","blue");
+        //     // })
+        // }
+        const fun = function(){
+            $("div").click(function(){
+                $(this).css("background-color","blue");
+            })
+            $("div").mouseover(function(){
+                $(this).css("font-size","50px");
+            }).mouseleave(function(){
+                $(this).css("font-size","20px");
+            })
+            $("div").hide(1800);
+            console.log("First jquery");
+            $("a").click(function(){
+                $("div").show(1800);
+
+            })
+        };
+        $().ready(fun);
+    </script>
+    <nav>
+        <a href="#">Display All</a>
+    </nav>
+    <div>
+        <p>DIV1</p>
+        
+    </div>
+    <div>
+        <p>DIV2</p>
+        
+    </div>
+    <div>
+        <p>DIV3</p>
+        
+    </div>
+    
+</body>
+</html>

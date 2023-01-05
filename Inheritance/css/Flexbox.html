@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column ;
+            flex-wrap: wrap;
+            flex-flow: column;
+            flex-shrink: 0;
+            text-align: center;
+            background-color: blueviolet;
+            align-items: baseline;
+            padding: 5px;
+            flex-flow: row;
+            margin: 15px;
+        }
+        .item{
+            width: 200px;
+            flex-basis: 100px;
+            /* flex-grow: 2; */
+            border: 2px solid red;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="flex-shrink: 0;">ITEM1</div>
+        <div class="item">ITEM2</div>
+        <div class="item" style="flex-grow: 4;">ITEM3</div>
+        <div class="item">ITEM4</div>
+
+    </div>
+    
+</body>
+</html>

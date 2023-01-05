@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time based functions</title>
+    <script>
+        function dispalyTime(){
+            const curdt = new Date();
+            const hr = curdt.getHours();
+            const min = curdt.getMinutes();
+            const sec = curdt.getSeconds();
+            const stContent = `<b>${hr}:${min}:${sec}</b>`;
+            document.getElementById("labelTime").innerHTML = stContent;
+
+        }
+        function setTimeInterval() {
+            setInterval(function(){
+            const curdt = new Date();
+            const hr = curdt.getHours();
+            const min = curdt.getMinutes();
+            const sec = curdt.getSeconds();
+            const stContent = `<b>${hr}:${min}:${sec}</b>`;
+            document.getElementById("labelTime").innerHTML = stContent;
+
+            },1000);
+        }
+
+    </script>
+</head>
+<body>
+    <h2>TIME BASED FUNCTIONS</h2>
+    <div>
+        <p>
+            <label id="labelTime"></label>
+        </p>
+        <button onclick="setTimeout()">setTimeout</button>
+        <button onclick="setTimeInterval()">setTimeInterval</button>
+    </div>
+    
+</body>
+</html>

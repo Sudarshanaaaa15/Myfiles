@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./crudoperations.js"></script>
+</head>
+<body>
+    <div>
+        <input id="text" placeholder="Enter the favrt Book"/>
+        <button onclick="onaddItem()">Add</button>
+        <button>Remove</button>
+        <button>Modify</button>
+        <p id="pDisplay">
+            <ol id="List"></ol>
+        </p>
+
+    </div>
+    <script>
+        const onrem = function(id){
+            remItem(id);
+            populate();
+        }
+        const onedit = function(id){
+            const updatedItem = prompt("Enter a new book"); 
+            editItem(id,updatedItem );
+            populate();
+        }
+
+        const populate = function()
+        {
+            let s = document.getElementById("List");
+            s.innerHTML ="";
+            const data = getAll();
+            for(let i = 0; i < data.length; i++){
+                const line = `<li type="i">${data[i]}
+                    <a href="#" onclick="onrem(${i})">Remove</a>
+                    <a href="#" onclick="onedit(${i})">Update</a></li>`
+                s.innerHTML += line;
+            }
+
+        }
+
+        //creating addItem
+        const onaddItem = function(){
+            const name = document.getElementById("text").value;
+            sumItem(name);
+            alert("Book sumed Successfully");
+            populate();
+        }
+        //call the sumItem() four time with different values
+        sumItem("Book1");
+        sumItem("Book2");
+        sumItem("Book3");
+        sumItem("Book4");
+        document.getElementById("pDisplay").innerText = selfBooks;
+    </script>
+</body>
+</html>

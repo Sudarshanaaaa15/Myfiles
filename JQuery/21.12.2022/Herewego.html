@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here We Go....!</title>
+    <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
+    <script>
+        $().ready(start)
+        function start() {
+            // $("div").hide();
+            $("div").children("div").hide();
+            $("#loginbtn").click(logg)
+            $("#logi").click(newpage)
+            $("#regis").click(regiss)
+        }
+        function newpage() {
+            const myObject = {
+                uname: "rr",
+                pasw: 32
+            }
+            window.localStorage.setItem("myObject", myObject);
+            window.localStorage.getItem('myObject');
+            let newObject = window.localStorage.getItem("myObject");
+            console.log(newObject);
+        }
+        function logg() {
+            $("div").children("div:eq(0)").show(1000);
+        }
+        function regiss() {
+            $("div").children("div:eq(1)").show(1000);
+
+        }
+        // function store() {
+        //     localStorage.setItem('')
+        // }
+    </script>
+
+    <!-- <style>
+        h1 {
+            text-align: center;
+            background-color: bisque;
+        }
+
+        .dropbtn {
+            background-color: rgb(151, 151, 121);
+            color: black;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative
+        }
+
+        .dropdown-content {
+            position: absolute;
+            background-color: lightgrey;
+            min-width: 200px;
+            display: none;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: orange;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: grey;
+        }
+
+        .dropdown {
+            text-align: center;
+        }
+
+        /* 
+         {
+            float: :right;
+        } */
+    </style> -->
+    <!-- <style>
+        input[type=text],input[type=password] {
+        width: 15%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    input[type=text],input[type=email],input[type=password],input[type=password] {
+        width: 15%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    </style> -->
+</head>
+
+<body>
+    <center>
+        <h1 style="text-align: center;background-color: rgb(91, 121, 148);">Welcome to the best food ordering place</h1>
+
+        <nav>
+            <button id="loginbtn">Login</button>
+        </nav>
+        <div>
+            <div id="div1">
+                <h2>Login</h2>
+                Username : <input type="text" placeholder="Enter Username" id="uname" required><br>
+
+                Password : <input type="password" placeholder="Enter Password" id="psw" required><br>
+
+                <button type="submit" id="logi">Login</button> <a href="#">Forgot password?</a><br>
+                <!-- <input type="checkbox" checked="checked"> Remember me -->
+                New User <a href="#" id="regis">Register</a>
+            </div>
+            <div id="div2">
+                <h2>Registration Form</h2>
+                UserName : <input type="text" placeholder="Enter Username" id="uName" required><br>
+
+                <!-- Email : <input type="email" placeholder="Enter mail" name="mail" required><br> -->
+
+                Password : <input type="password" placeholder="Enter Password" id="pasw" required><br>
+
+                Confirm Password: <input type="password" placeholder="Enter Confirm Password" id="con-psw" required><br>
+
+                <button type="submit">Register</button>
+                <button>cancel</button>
+                <!-- <input type="checkbox" checked="checked"> Remember me -->
+                <!-- New User <a href="#">Register</a> -->
+                <!-- <a href="#">Forgot password?</a><br> -->
+            </div>
+        </div>
+    </center>
+</body>
+
+<!-- <div class="dropdown">
+        <button class="dropbtn">Home</button>
+            <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Order</a>
+            <a href="#">Location</a>
+        </div> -->
+
+<!-- <h3>Signin</h3>
+        <form>
+            <input type="text" id="text" placeholder="UserName"><br>
+            <input type="password" id="pass" placeholder="password"><br>
+            <a href="signin" id="signin"></a><br>
+            <button>Signin</button>
+        <!-- </form> -->
+
+
+</html>

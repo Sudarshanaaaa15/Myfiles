@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="repopatterns.js"></script>
+    <script>
+        function createRow(Emp){
+            let Row = document.createElement("tr");
+            Row.innerHTML = `<td>${Emp.Empid}</td>
+            <td>${Emp.Empname}</td>
+            <td>${Emp.Empaddress}</td>
+            <td>${Emp.Empsalary}</td>`;
+            return Row;
+        }
+        function populate(){
+            // const table = document.querySelector('#tblRecords');
+            // for(const Employee of arr){
+            //     let Row = createRow(Employee);
+            //     table.appendChild(Row);
+            const table = document.querySelector('#tblRecords');
+            const frROW = document.querySelector('#theading')
+            table.innerHTML = "";
+            table.appendChild(frROW);
+            console.log("235252")
+            for(const Employee of arr){
+
+                let Row = createRow(Employee);
+                table.appendChild(Row);
+            }
+            console.log("qwdq")
+        }
+    
+        window.addEventListener("load",function(){
+          populate()
+            })
+      function onAdd(){
+           const id = prompt("Enter the id of the Employee to Add");
+           try{
+                    const foundRec = instance.getEmployee(id)
+                    document.getElementById("textId").value = foundRec.Empid;
+                    document.getElementById("textName").value = foundRec.Empname;
+                    document.getElementById("textAddress").value = foundRec.Empaddress;
+                    document.getElementById("textSalary").value = foundRec.Empsalary;
+                    
+                }catch(ex){
+                    alert(ex)
+                }    
+            }
+
+        function onDelete(){
+           const id = prompt("Enter the id of the Employee to Delete");
+  
+        }
+        function onupdate(){
+            const id = prompt("Enter the id of the Employee to Edit");
+            try{
+                    const foundRec = instance.getEmployee(id)
+                    document.getElementById("textId").value = foundRec.Empid;
+                    document.getElementById("textName").value = foundRec.Empname;
+                    document.getElementById("textAddress").value = foundRec.Empaddress;
+                    document.getElementById("textSalary").value = foundRec.Empsalary;
+
+                    
+                }catch(ex){
+                    alert(ex);
+                }    
+            }
+            function onSaveChanges() {
+                const Id = parseInt(document.getElementById("textId").value);
+                const Name = document.getElementById("textName").value;
+                const Address = document.getElementById("textAddress").value;
+                const Salary = parseFloat(document.getElementById("textSalary").value);
+
+                const Emp = new Employee(Id,Name,Address,Salary);
+                try {
+                    console.log("*********");
+                    instance.updateEmployee(Emp);
+                    populate();
+                    console.log("------------");
+                } catch (err) {
+                    alert(err)
+                }
+            }
+        //}
+    </script>
+</head>
+<body>
+    <h1>EMPLOYEE MONITORING SYSTEM</h1>
+    <hr>
+    <nav>
+        <a href="#" onclick="onAdd()">Add record</a>
+        <a href="#" onclick="onDelete()">Delete record</a>
+        <a href="#" onclick="onupdate()">Edit record</a>
+    </nav>
+    <div>
+        <h2>LIST OF EMPLOYEES</h2>
+        <hr>
+        <table id="tblRecords" border="1">
+        <tr id="theading">
+            <tr>
+                <th>Employee id</th>
+                <th>Employee name</th>
+                <th>Employee address</th>
+                <th>Employee salary</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2>UPDATING DETAILS OF EMPLOYEE</h2>
+        <p>
+            Employee ID:
+            <input readonly type="number" id="textId">
+        </p>
+        <p>
+            Employee Name:
+            <input type="text" id="textName">
+        </p>
+        <p>
+            Employee Address:
+            <input type="text" id="textAddress">
+        </p>
+        <p>
+            Employee Salary:
+            <input type="text" id="textSalary">
+        </p>
+        <p>
+            <input type="button" value="Save Changes" onclick="onSaveChanges()">
+        </p> 
+    </div>
+    <div>
+        <h2>ADDING DETAILS OF EMPLOYEE</h2>
+        <p>
+            Employee ID:
+            <input readonly type="number" id="textId">
+        </p>
+        <p>
+            Employee Name:
+            <input type="text" id="textName">
+        </p>
+        <p>
+            Employee Address:
+            <input type="text" id="textAddress">
+        </p>
+        <p>
+            Employee Salary:
+            <input type="text" id="textSalary">
+        </p>
+        <p>
+            <input type="button" value="Save Changes" onclick="onSaveChanges()">
+        </p> 
+    </div>
+    
+</body>
+</html>

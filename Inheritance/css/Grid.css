@@ -1,0 +1,56 @@
+.col-1{
+    width:8.33%;
+
+}
+.col-2{
+    width:10.33%;
+    
+}
+.col-3{
+    width: 48%;
+    
+}
+.col-4{
+    width:8.33%;
+    
+}
+.col-5{
+    width:8.33%;
+    
+}
+.col-6{
+    width:8.33%;
+    
+}
+.col-7{
+    width:8.33%;
+    
+}
+.col-8{
+    width:8.33%;
+    
+}
+.col-9{
+    width:8.33%;
+    
+}
+.col-10{
+    width:8.33%;
+    
+}
+.col-11{
+    width:8.33%;
+    
+}
+.col-12{
+    width:8.33%;
+    
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row{
+    
+
+}
