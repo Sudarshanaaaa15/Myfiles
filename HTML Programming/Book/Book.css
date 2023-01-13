@@ -1,0 +1,21 @@
+.data{
+    max-width: 350px; 
+    /* max-height: 400px; */
+    margin: 10vh auto 0 auto;
+    box-shadow: 0px 0px 45px 18px rgba(130,150,130,150);
+    text-align: center;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+}
+#olBook{
+    text-align: center;
+    border: 2px solid rgb(184, 168, 168);
+    
+    box-shadow: 0px 0px 45px 18px rgba(130,150,130,150);
+    margin: 20px;
+    background-color: aqua;
+    width: 150px;
+    border-radius: 10px;
+    
+}
