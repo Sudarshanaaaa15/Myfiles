@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TollPlaza</title>
+
+    <style>
+      body {
+        font-family:sans-serif;
+        font-size: x-large;
+        background-image: url("https://pbs.twimg.com/media/C3az5K-W8AEQFqw.jpg:large");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        background-color: lightsalmon;
+      }
+      .container {
+        max-width: 1000px;
+        max-block-size: 2000px;
+        max-height: max-content;
+        margin: 10vh auto 0 auto;
+        box-shadow: 5px 5px 5px 8px rgba(150, 150, 150, 150);
+        padding: 10px;
+        background: transparent;
+        border-radius: 5px;
+      }
+      
+      div {
+        padding: 10px;
+      }
+      table {
+        background-color: rgb(133, 94, 94);
+        background: transparent;
+        border: solid 2px whitesmoke;
+        max-width: 600px;
+      }
+      button {
+        background: transparent;
+        color: white;
+        border-radius: 35px;
+      }
+      input {
+        width: 18%;
+        /* color: greenyellow; */
+        /* background-color: green; */
+        background: transparent;
+        border-radius: 40px;
+      }
+      select {
+        width: 18%;
+        background: transparent;
+        /* color: greenyellow; */
+        /* background-color: green; */
+        border-radius: 35px;
+      }
+    </style>
+
+    <script src="./TollPlaza.js"></script>
+    <script src="./jquery-3.6.2.min.js"></script>
+
+    <script>
+      vehicleList = { CAR: 170, BUS: 200, BIKE: 100, TRUCK: 300 };
+      $().ready(start);
+
+      function start() {
+        $("table").hide();
+        $("#sel").change(onChange);
+        $("#onSave").click(onClick);
+        $("#detail").click(onDetail);
+        $("#addbutton").click(addDetail);
+        $("#onAddNew").click(onAddNew);
+        $(".hide").hide();
+      }
+
+      function onAddNew() {
+        $(".hide").show(1000);
+      }
+      function onChange() {
+        const data = $("#sel").val();
+        // console.log(data)
+        $("#deftype").val(data);
+        // $("#defAMT").val(vehicleList.keys());
+        $("#defAMT").val(vehicleList[data]);
+        console.log(vehicleList[data]);
+      }
+      function onClick() {
+        const type = $("#deftype").val();
+        const amount = $("#defAMT").val();
+        const num = $("#vNum").val();
+        const date = $("#vdate").val();
+        // console.log(type,amount,date,num)
+        obj.addData(new TollPlaza(type, amount, num, date));
+        // console.log(obj.storeData);
+        clearr();
+      }
+      function clearr() {
+        $("#deftype").val("");
+        $("#defAMT").val("");
+        $("#vNum").val("");
+        $("#vdate").val("");
+        $("#add").val("");
+        $("#addFee").val("");
+        $("#sel").val("div:eq(1)>select>option");
+      }
+      function onDetail() {
+        $("table").show();
+        const fetch = obj.getAllData();
+        // console.log(fetch)
+        populate(fetch);
+      }
+      function populate(data) {
+        $("#repotable").find("tr:gt(0)").remove();
+        $.each(data, (index, item) => {
+          const detailrow = `<tr>
+                    <td>${item.vType}</td>
+                    <td>${item.vAmount}</td>
+                    <td>${item.vNum}</td>
+                    <td>${item.vDate}</td>
+                    </tr>`;
+          $("table").append(detailrow);
+        });
+      }
+
+      function addDetail() {
+        const newvehicle = $("#add").val().toUpperCase();
+        const newFee = $("#addFee").val();
+        for (let ex in vehicleList) {
+          if (newvehicle == ex) {
+            //alert("jshdjsdhjshdjhsd");
+          }
+        }
+        if (newvehicle == "") {
+          $("#add").val("");
+          $("#addFee").val("");
+          // alert("sdhsjhsjd\d")
+        } else {
+          $("#add").val("");
+          $("#addFee").val("");
+          vehicleList[newvehicle] = parseInt(newFee);
+          // console.log(vehicleList);
+          const option = `<option value="${newvehicle}"> ${newvehicle} </option>)`;
+          $("#sel").append(option);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <center class="container">
+      <h2 style="margin-top: 20px ;color: aqua;">NELAMANGLA TOLL PLAZA</h2>
+      <h6><marquee direction="right" behavior="alternate" style="color: beige;">Welcome to the best toll collection site....!</marquee></h6>
+      <div class="container2">
+      <form>
+      <div>
+        Select Type :
+        <select id="sel" style="color:darkgray;">
+          <option value="DEFAULT">Select Type</option>
+          <option value="CAR">CAR</option>
+          <option value="BIKE">BIKE</option>
+          <option value="BUS">BUS</option>
+          <option value="TRUCK">TRUCK</option>
+        </select>
+        <br />
+        Vehicle Type :
+        <input style="border: 2px; color: rgb(207, 165, 165);" type="text" disabled id="deftype" /> <br />
+        Vehicle Amount :
+        <input style="border: 2px; color: darkgray;" type="text" disabled id="defAMT"  /> <br />
+        Vehicle Number : <input type="text" id="vNum" style="color: darkgray;" /> <br />
+        Date : <input type="date" id="vdate" style="color: darkgray;"/> <br />
+        <button id="onSave">Save Details</button>
+      </div>
+      <div class="hide">
+        Add new vehicle : <input type="text" id="add" /> <br />
+        Add Vehicle fee : <input type="number" id="addFee" /> <br />
+        <button id="addbutton">Add to list</button>
+      </div>
+      <div>
+        <button id="onAddNew">Register New Vehicle</button>
+      </div>
+    </form>
+  </div>
+      <div>
+        <button id="detail">Generate report</button>
+
+        <table border="1" id="repotable">
+          <th>Vehicle Type</th>
+          <th>Amount</th>
+          <th>Number</th>
+          <th>Date</th>
+        </table>
+      </div>
+    </center>
+  </body>
+</html>
