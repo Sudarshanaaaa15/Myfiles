@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flipkart App</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h1>Application Heading</h1>
+    </div>
+    <div>
+        <nav>
+            <h6>Menu of the Application</h6>
+            <a href="#">Display Products</a>
+            <a href="#">Add New Product</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-hover table-secondary table-striped-columns">
+                    <tr>
+                        <td>Product ID</td>
+                        <td>Product Name</td>
+                        <td>Product Details</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <img src="" alt="Image" id="Iamge" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3>Details of the product</h3>
+                <div class="row">
+                    <div class="m-3">
+                        <input disabled id="txtId" placeholder="ProductId" class="form-control" />
+                    </div>
+                    <div class="m-3">
+                        <input id="txtName" placeholder="ProductName" class="form-control" />
+                    </div>
+                    <div class="m-3">
+                        <input id="txtPrice" placeholder="ProductPrice" class="form-control" />
+                    </div>
+                    <div class="m-3">
+                        <input id="txtQuantity" placeholder="ProductQuantity" class="form-control" />
+                    </div>
+                    <div class="m-4">
+                        <button class="btn btn-primary" onclick="UpdateProduct()">Update</button>
+                        <button class="btn btn-secondary" onclick="AddProduct()">Add</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="../Scripts/jquery-3.6.3.min.js"></script>
+    <script src="../Scripts/ProductApp.js"></script>
+    <script>
+        $(document).ready(init);
+    </script>
+</body>
+</html>
