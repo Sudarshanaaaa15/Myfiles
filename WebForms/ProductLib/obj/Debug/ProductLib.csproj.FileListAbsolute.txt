@@ -1,0 +1,12 @@
+C:\Users\sudarshana.m\source\repos\ProductLib\bin\Debug\ProductLib.dll.config
+C:\Users\sudarshana.m\source\repos\ProductLib\bin\Debug\ProductLib.dll
+C:\Users\sudarshana.m\source\repos\ProductLib\bin\Debug\ProductLib.pdb
+C:\Users\sudarshana.m\source\repos\ProductLib\bin\Debug\EntityFramework.dll
+C:\Users\sudarshana.m\source\repos\ProductLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sudarshana.m\source\repos\ProductLib\bin\Debug\EntityFramework.xml
+C:\Users\sudarshana.m\source\repos\ProductLib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sudarshana.m\source\repos\ProductLib\obj\Debug\ProductLib.csprojAssemblyReference.cache
+C:\Users\sudarshana.m\source\repos\ProductLib\obj\Debug\ProductLib.csproj.CoreCompileInputs.cache
+C:\Users\sudarshana.m\source\repos\ProductLib\obj\Debug\ProductLib.csproj.CopyComplete
+C:\Users\sudarshana.m\source\repos\ProductLib\obj\Debug\ProductLib.dll
+C:\Users\sudarshana.m\source\repos\ProductLib\obj\Debug\ProductLib.pdb

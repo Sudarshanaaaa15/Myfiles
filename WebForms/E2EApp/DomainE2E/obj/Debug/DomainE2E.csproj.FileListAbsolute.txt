@@ -1,0 +1,7 @@
+C:\Users\sudarshana.m\source\repos\E2EApp\DomainE2E\bin\Debug\DomainE2E.exe.config
+C:\Users\sudarshana.m\source\repos\E2EApp\DomainE2E\bin\Debug\DomainE2E.exe
+C:\Users\sudarshana.m\source\repos\E2EApp\DomainE2E\bin\Debug\DomainE2E.pdb
+C:\Users\sudarshana.m\source\repos\E2EApp\DomainE2E\obj\Debug\DomainE2E.csprojAssemblyReference.cache
+C:\Users\sudarshana.m\source\repos\E2EApp\DomainE2E\obj\Debug\DomainE2E.csproj.CoreCompileInputs.cache
+C:\Users\sudarshana.m\source\repos\E2EApp\DomainE2E\obj\Debug\DomainE2E.exe
+C:\Users\sudarshana.m\source\repos\E2EApp\DomainE2E\obj\Debug\DomainE2E.pdb

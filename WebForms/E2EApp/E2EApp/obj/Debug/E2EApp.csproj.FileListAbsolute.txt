@@ -1,0 +1,7 @@
+C:\Users\sudarshana.m\source\repos\E2EApp\E2EApp\bin\Debug\E2EApp.exe.config
+C:\Users\sudarshana.m\source\repos\E2EApp\E2EApp\bin\Debug\E2EApp.exe
+C:\Users\sudarshana.m\source\repos\E2EApp\E2EApp\bin\Debug\E2EApp.pdb
+C:\Users\sudarshana.m\source\repos\E2EApp\E2EApp\obj\Debug\E2EApp.csprojAssemblyReference.cache
+C:\Users\sudarshana.m\source\repos\E2EApp\E2EApp\obj\Debug\E2EApp.csproj.CoreCompileInputs.cache
+C:\Users\sudarshana.m\source\repos\E2EApp\E2EApp\obj\Debug\E2EApp.exe
+C:\Users\sudarshana.m\source\repos\E2EApp\E2EApp\obj\Debug\E2EApp.pdb
