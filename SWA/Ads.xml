@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Advertisement-File-1.2">
+  <Ad xmlns="">
+    <ImageUrl>./Images/jio.png</ImageUrl>
+    <AlternateText>jio</AlternateText>
+    <NavigateUrl>https://www.jio.com/</NavigateUrl>
+    <Impressions>50</Impressions>
+  </Ad>
+  <Ad xmlns="">
+    <ImageUrl>./Images/Google.png</ImageUrl>
+    <AlternateText>Google</AlternateText>
+    <NavigateUrl>https://www.google.co.in/</NavigateUrl>
+    <Impressions>50</Impressions>
+  </Ad>
+</Advertisements>
+

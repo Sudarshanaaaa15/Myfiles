@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="SampleWebApp.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="row">
+
+                <h1>Welcome to .NET Training.....!</h1>
+                
+                <p>ASP.NET is the MS technology for developing rich Internet Applications in a Rapid Application Development(RAD) Manner. Please click on the links below to see the features!!!</p>
+                <hr />
+                <p>
+                <asp:Button Text="Signout" runat="server" OnClick="UserInfo_Click" BorderStyle="Solid" ForeColor="#FFCCFF" />
+                <asp:Label ID="lblUserInfo" runat="server" />
+                </p>
+                <asp:Menu runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Home" NavigateUrl="~/Homepage.aspx"/>
+                        <asp:MenuItem Text="Login" NavigateUrl="~/Login.aspx" />
+                        <asp:MenuItem Text="Calcy program" NavigateUrl="~/CalcPage.aspx" />
+                        <asp:MenuItem Text="Entity class"/>
+                        <asp:MenuItem Text="DatabaseApp" NavigateUrl="~/ProductApp.aspx" />
+                        <asp:MenuItem Text="Validations" NavigateUrl="~/Validation.aspx" />
+                        <asp:MenuItem Text="State management">
+                            <asp:MenuItem Text="Mainpage" NavigateUrl="~/InputPage.aspx" />
+                            <asp:MenuItem Text="Recipiant page" NavigateUrl="~/RecipiantData.aspx" />
+                            <asp:MenuItem Text="shopping cart" NavigateUrl="~/StateManagement.aspx" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Cacheing">
+                            <asp:MenuItem Text="Ouput Cacheing" NavigateUrl="~/Cacheing.aspx" />
+                            <asp:MenuItem Text="Fragment Cacheing" NavigateUrl="~/Cacheing.aspx" />
+                            <asp:MenuItem Text="Data Cacheing" NavigateUrl="~/DataCacheing.aspx" />
+
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <asp:ContentPlaceHolder runat="server" ID="mainContent"></asp:ContentPlaceHolder>
+                </div>
+                <div class="col-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <asp:AdRotator Width="100%" Height="160px" AdvertisementFile="~/Ads.xml" runat="server"/>
+                        </div>
+                        <div class="row">
+                           <asp:Calendar runat="server" BackColor="#FF66FF" BorderColor="#660033" BorderStyle="Solid" CellSpacing="2" DayNameFormat="Shortest" FirstDayOfWeek="Sunday" Font-Bold="True" Font-Italic="False" Font-Names="Segoe UI Black" Height="160px" SelectedDate="2023-02-01" TitleFormat="Month" Width="100%" >
+                               <DayHeaderStyle BackColor="#FFCCFF" BorderColor="#6600FF" BorderStyle="Solid" ForeColor="#FFCCCC" />
+                               <SelectedDayStyle BorderColor="#990000" />
+                            </asp:Calendar>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <p style="text-align:center">
+                   <i>Copyrights Starmark-Training-<asp:Label Text="" ID="lblCal" runat="server" /></i>
+               </p>
+           </div>
+
+            <%--<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>--%>
+        </div>
+    </form>
+</body>
+</html>
