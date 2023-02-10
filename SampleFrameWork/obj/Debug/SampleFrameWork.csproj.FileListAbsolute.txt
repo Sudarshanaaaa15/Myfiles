@@ -1,0 +1,7 @@
+C:\Users\sudarshana.m\source\repos\ConsoleApp3\SampleFrameWork\bin\Debug\SampleFrameWork.exe.config
+C:\Users\sudarshana.m\source\repos\ConsoleApp3\SampleFrameWork\bin\Debug\SampleFrameWork.exe
+C:\Users\sudarshana.m\source\repos\ConsoleApp3\SampleFrameWork\bin\Debug\SampleFrameWork.pdb
+C:\Users\sudarshana.m\source\repos\ConsoleApp3\SampleFrameWork\obj\Debug\SampleFrameWork.csproj.CoreCompileInputs.cache
+C:\Users\sudarshana.m\source\repos\ConsoleApp3\SampleFrameWork\obj\Debug\SampleFrameWork.exe
+C:\Users\sudarshana.m\source\repos\ConsoleApp3\SampleFrameWork\obj\Debug\SampleFrameWork.pdb
+C:\Users\sudarshana.m\source\repos\ConsoleApp3\SampleFrameWork\obj\Debug\SampleFrameWork.csprojAssemblyReference.cache

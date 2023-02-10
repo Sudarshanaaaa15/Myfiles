@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="3334" Class="linqtosqlDemoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.171.36;Initial Catalog=3334;Integrated Security=True" SettingsObjectName="SampleData.Properties.Settings" SettingsPropertyName="_3334ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tlEmployee" Member="tlEmployees">
+    <Type Name="tlEmployee">
+      <Column Name="EmpId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EmpAddress" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="EmpSalary" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DeptID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tlDept_tlEmployee" Member="tlDept" ThisKey="DeptID" OtherKey="DeptID" Type="tlDept" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tlDept" Member="tlDepts">
+    <Type Name="tlDept">
+      <Column Name="DeptID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeptName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tlDept_tlEmployee" Member="tlEmployees" ThisKey="DeptID" OtherKey="DeptID" Type="tlEmployee" />
+    </Type>
+  </Table>
+</Database>

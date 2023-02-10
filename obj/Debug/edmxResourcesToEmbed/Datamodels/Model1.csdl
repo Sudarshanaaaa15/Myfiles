@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tlDept">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tlEmployees" Relationship="Self.FK__tlEmploye__DeptI__628FA481" FromRole="tlDept" ToRole="tlEmployee" />
+  </EntityType>
+  <EntityType Name="tlEmployee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmpAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmpSalary" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="DeptID" Type="Int32" />
+    <NavigationProperty Name="tlDept" Relationship="Self.FK__tlEmploye__DeptI__628FA481" FromRole="tlEmployee" ToRole="tlDept" />
+  </EntityType>
+  <Association Name="FK__tlEmploye__DeptI__628FA481">
+    <End Role="tlDept" Type="Self.tlDept" Multiplicity="0..1" />
+    <End Role="tlEmployee" Type="Self.tlEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tlDept">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="tlEmployee">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tlDepts" EntityType="Self.tlDept" />
+    <EntitySet Name="tlEmployees" EntityType="Self.tlEmployee" />
+    <AssociationSet Name="FK__tlEmploye__DeptI__628FA481" Association="Self.FK__tlEmploye__DeptI__628FA481">
+      <End Role="tlDept" EntitySet="tlDepts" />
+      <End Role="tlEmployee" EntitySet="tlEmployees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

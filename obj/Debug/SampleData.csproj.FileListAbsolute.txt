@@ -1,0 +1,13 @@
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\SampleData.exe.config
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\SampleData.exe
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\SampleData.pdb
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\obj\Debug\SampleData.csprojAssemblyReference.cache
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\obj\Debug\SampleData.csproj.CoreCompileInputs.cache
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\obj\Debug\SampleData.exe
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\obj\Debug\SampleData.pdb
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\obj\Debug\SampleData.csproj.CopyComplete
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\EntityFramework.dll
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\EntityFramework.xml
+C:\Users\sudarshana.m\source\repos\SampleData\SampleData\bin\Debug\EntityFramework.SqlServer.xml

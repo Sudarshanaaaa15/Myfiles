@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Employeee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EmpId>112</EmpId>
+  <EmpName>Rajesh</EmpName>
+  <EmpAddress>Bangalore</EmpAddress>
+</Employeee>xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:EmpSoap id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/SampleFrameWork.Practical/SampleFrameWork%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_x003C_EmpId_x003E_k__BackingField>111</_x003C_EmpId_x003E_k__BackingField>
+<_x003C_EmpName_x003E_k__BackingField id="ref-3">suresh</_x003C_EmpName_x003E_k__BackingField>
+<_x003C_EmpAddress_x003E_k__BackingField id="ref-4">Raipur</_x003C_EmpAddress_x003E_k__BackingField>
+</a1:EmpSoap>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

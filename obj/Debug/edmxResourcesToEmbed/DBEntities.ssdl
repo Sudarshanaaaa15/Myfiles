@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tlDept">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlEmployee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpAddress" Type="varchar(max)" Nullable="false" />
+    <Property Name="EmpSalary" Type="money" Nullable="false" />
+    <Property Name="DeptID" Type="int" />
+  </EntityType>
+  <Association Name="FK__tlEmploye__DeptI__628FA481">
+    <End Role="tlDept" Type="Self.tlDept" Multiplicity="0..1" />
+    <End Role="tlEmployee" Type="Self.tlEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tlDept">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="tlEmployee">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBEntitiesStoreContainer">
+    <EntitySet Name="tlDept" EntityType="Self.tlDept" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlEmployee" EntityType="Self.tlEmployee" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tlEmploye__DeptI__628FA481" Association="Self.FK__tlEmploye__DeptI__628FA481">
+      <End Role="tlDept" EntitySet="tlDept" />
+      <End Role="tlEmployee" EntitySet="tlEmployee" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

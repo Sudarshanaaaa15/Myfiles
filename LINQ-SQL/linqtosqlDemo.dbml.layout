@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="linqtosqlDemo">
+  <DataContextMoniker Name="/linqtosqlDemoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7af4ab4d-3df0-46d4-a280-b36e82f1a3a5" absoluteBounds="6.75, 3.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqtosqlDemoDataContext/tlEmployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e6f2a9e-638a-462a-b8d8-82a199fae10a" absoluteBounds="6.7650000000000006, 4.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b224bf0-f33d-4a12-a9f3-d0bc714397c9" absoluteBounds="3, 4, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/linqtosqlDemoDataContext/tlDept" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbb300f5-561b-496e-80fa-580fd23a5459" absoluteBounds="3.0149999999999997, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 4.59699625651042); (6.75 : 4.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqtosqlDemoDataContext/tlDept/tlDept_tlEmployee" />
+      <nodes>
+        <classShapeMoniker Id="1b224bf0-f33d-4a12-a9f3-d0bc714397c9" />
+        <classShapeMoniker Id="7af4ab4d-3df0-46d4-a280-b36e82f1a3a5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
