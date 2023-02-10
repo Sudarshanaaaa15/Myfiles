@@ -1,0 +1,7 @@
+C:\Users\sudarshana.m\source\repos\MedicalResearchApplication\Assignment1\bin\Debug\Assignment1.exe.config
+C:\Users\sudarshana.m\source\repos\MedicalResearchApplication\Assignment1\bin\Debug\Assignment1.exe
+C:\Users\sudarshana.m\source\repos\MedicalResearchApplication\Assignment1\bin\Debug\Assignment1.pdb
+C:\Users\sudarshana.m\source\repos\MedicalResearchApplication\Assignment1\obj\Debug\Assignment1.csprojAssemblyReference.cache
+C:\Users\sudarshana.m\source\repos\MedicalResearchApplication\Assignment1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache
+C:\Users\sudarshana.m\source\repos\MedicalResearchApplication\Assignment1\obj\Debug\Assignment1.exe
+C:\Users\sudarshana.m\source\repos\MedicalResearchApplication\Assignment1\obj\Debug\Assignment1.pdb
