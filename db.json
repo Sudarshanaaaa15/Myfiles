@@ -1,0 +1,90 @@
+{
+  "Books": [
+    {
+      "Id": 1,
+      "bookName": "Oliver Twist",
+      "Price": 450,
+      "Author": "Charles Dickens"
+    },
+    {
+      "Id": 2,
+      "bookName": "The Tale of 2 Cities",
+      "Price": 350,
+      "Author": "Charles Dickens"
+    },
+    {
+      "Id": 3,
+      "bookName": "Pride and Predujice",
+      "Price": 400,
+      "Author": "Jane Austin"
+    },
+    {
+      "Id": 4,
+      "bookName": "King Lear",
+      "Price": 200,
+      "Author": "W. Shakespear"
+    },
+    {
+      "Id": 5,
+      "bookName": "Romeo and Juliet",
+      "Price": 200,
+      "Author": "W. Shakespear"
+    },
+    {
+      "Id": 6,
+      "bookName": "The Merchant of Venice",
+      "Price": 150,
+      "Author": "W. Shakespear"
+    },
+    {
+      "Id": 7,
+      "bookName": "The Faults in our Stars",
+      "Price": 120,
+      "Author": "John Green"
+    },
+    {
+      "Id": 8,
+      "bookName": "Julius Ceaser",
+      "Price": 100,
+      "Author": "W. Shakespear"
+    },
+    {
+      "Id": 9,
+      "bookName": "It Starts with Us!",
+      "Price": 500,
+      "Author": "Collin Hoover"
+    },
+    {
+      "Id": 10,
+      "bookName": "The Compound Effect",
+      "Price": 560,
+      "Author": "Darren Hardy"
+    },
+    {
+      "id": "11",
+      "bookName": "adasd",
+      "Price": "1212",
+      "Author": "dasd"
+    },
+    {
+      "id": "13",
+      "bookName": "ggfff",
+      "Price": "456",
+      "Author": "fgggg"
+    },
+    {
+      "Id": "13",
+      "bookName": "FGGG",
+      "Price": "520",
+      "Author": "GHGFHGF",
+      "id": "bTJ6-Y2"
+    },
+    {
+      "Id": "",
+      "bookName": "",
+      "Price": "",
+      "Author": "",
+      "id": "3a3_IWv"
+    }
+  ]
+}

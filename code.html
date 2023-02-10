@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <title>af</title>
+    <script>
+        $().ready(function(){
+            $("button").click(function(){
+                const userInput = $("#string").val()
+                console.log(userInput)
+                convert(userInput);
+                const op1 = output.slice(0,-1)
+                console.log(op1)
+            })
+        })   
+        const str = "the quick brown fox jumps over the lazy dog"
+        let output = " "
+        const str1 = str.split(" ")
+        console.log(str1)
+        console.log(str1.indexOf("brown"))
+
+        function convert(str1){
+            
+            for(const i of str1){
+                console.log(i)
+                if(i == " ")  output += '-'
+
+                else{
+                    for(const singleWord of str1){
+
+                        if(singleWord.includes(i)){
+                            output += `${str1.indexOf(singleWord)}${singleWord.indexOf(i)},`
+                            console.log(output)
+                            break;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>String converter</h1>
+        <hr>
+    </header>
+
+    <section>
+        <label for="string"></label>
+        <input type="text" id="string">
+        <button>Encrypt</button>
+    </section>
+    </body>
+</html>
